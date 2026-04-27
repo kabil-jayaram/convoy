@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convoy - Privacy Policy</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
+        h1 { color: #1a1a1a; border-bottom: 2px solid #007AFF; padding-bottom: 10px; }
+        h2 { color: #1a1a1a; margin-top: 30px; }
+        h3 { color: #444; }
+        .effective-date { color: #666; font-style: italic; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        .contact { background: #f5f5f5; padding: 15px; border-radius: 8px; margin-top: 20px; }
+        a { color: #007AFF; }
+    </style>
+</head>
+<body>
+
+<h1>Convoy Privacy Policy</h1>
+<p class="effective-date">Effective Date: April 25, 2026 | Last Updated: April 25, 2026</p>
+
+<p>Convoy ("the App") is a motorcycle intercom application developed by Kabilan Jayaraman ("we", "us", "our"). This Privacy Policy explains what data we collect, how we use it, and your rights regarding your data.</p>
+
+<h2>1. Data We Collect</h2>
+
+<h3>1.1 Data Collected Automatically</h3>
+<ul>
+    <li><strong>Crash reports</strong> — anonymous stack traces and device information (model, OS version, app version) via Firebase Crashlytics. No personally identifiable information is included.</li>
+    <li><strong>Anonymous analytics</strong> — app usage patterns (screens visited, features used) via Firebase Analytics. No names, emails, or account information is collected.</li>
+</ul>
+
+<h3>1.2 Data You Provide</h3>
+<ul>
+    <li><strong>Rider profile</strong> — optional display name and blood type (stored locally on your device, encrypted with SQLCipher).</li>
+    <li><strong>Emergency contacts</strong> — optional phone numbers for crash detection alerts (stored locally, encrypted).</li>
+    <li><strong>Chat messages</strong> — text messages sent during intercom sessions (stored locally on your device only, never transmitted to our servers).</li>
+</ul>
+
+<h3>1.3 Data Generated During Use</h3>
+<ul>
+    <li><strong>GPS breadcrumb trails</strong> — recorded during rides for route visualization and GPX export. Stored locally on your device. If you enable Cloud Sync, compressed ride data (route, duration, speed) is synced to Firebase Firestore under your anonymous user ID.</li>
+    <li><strong>Call logs</strong> — duration, packet loss statistics, and connection quality metrics. No audio is ever recorded or stored.</li>
+    <li><strong>Session codes</strong> — 6-character codes used to connect riders. These are ephemeral and not stored on any server.</li>
+</ul>
+
+<h2>2. Data We Do NOT Collect</h2>
+<ul>
+    <li>We do <strong>not</strong> record, store, or transmit any audio from intercom calls.</li>
+    <li>We do <strong>not</strong> collect your email address, phone number, or real name (unless you voluntarily enter a display name).</li>
+    <li>We do <strong>not</strong> sell, share, or transfer any user data to third parties for advertising or marketing purposes.</li>
+    <li>We do <strong>not</strong> use your GPS location for tracking, advertising, or any purpose beyond the features you explicitly enable (ride trail recording, crash detection).</li>
+</ul>
+
+<h2>3. How We Use Your Data</h2>
+<ul>
+    <li><strong>Crash reports</strong> — to identify and fix bugs in the app.</li>
+    <li><strong>Anonymous analytics</strong> — to understand which features are used and improve the app.</li>
+    <li><strong>Cloud Sync</strong> (optional, off by default) — to back up your ride history across devices. Data is stored under an anonymous Firebase user ID with no link to your real identity.</li>
+    <li><strong>Crash detection</strong> (optional) — to detect potential motorcycle crashes and alert your emergency contacts. GPS and accelerometer data is processed entirely on your device.</li>
+</ul>
+
+<h2>4. Data Storage and Security</h2>
+<ul>
+    <li>All local data is encrypted using <strong>SQLCipher</strong> (AES-256) and <strong>Android EncryptedSharedPreferences</strong>.</li>
+    <li>All intercom communication is encrypted end-to-end using <strong>ECDH key exchange</strong> and <strong>AES-256-GCM</strong>.</li>
+    <li>Cloud Sync data is stored in <strong>Firebase Firestore</strong> (Google Cloud, asia-south1 region) with security rules that restrict access to your anonymous user ID only.</li>
+    <li>No data is stored on servers we operate. The TURN relay server forwards encrypted packets without decrypting or storing them.</li>
+</ul>
+
+<h2>5. Data Retention</h2>
+<ul>
+    <li><strong>Local data</strong> — retained indefinitely on your device until you uninstall the app or clear app data.</li>
+    <li><strong>Cloud Sync data</strong> — retained until you delete it (see Section 7) or disable Cloud Sync.</li>
+    <li><strong>Crash reports</strong> — retained by Firebase Crashlytics for 90 days.</li>
+    <li><strong>Analytics data</strong> — retained by Firebase Analytics for 14 months, then automatically deleted.</li>
+</ul>
+
+<h2>6. Third-Party Services</h2>
+<p>The App uses the following third-party services, each with their own privacy policies:</p>
+<ul>
+    <li><strong>Firebase Crashlytics</strong> — <a href="https://firebase.google.com/support/privacy">Firebase Privacy Policy</a></li>
+    <li><strong>Firebase Analytics</strong> — <a href="https://firebase.google.com/support/privacy">Firebase Privacy Policy</a></li>
+    <li><strong>Firebase Firestore</strong> (Cloud Sync only) — <a href="https://firebase.google.com/support/privacy">Firebase Privacy Policy</a></li>
+    <li><strong>MapLibre</strong> (offline maps) — open source, no data collection.</li>
+</ul>
+
+<h2>7. Your Rights (GDPR Article 15-22)</h2>
+<p>You have the right to:</p>
+<ul>
+    <li><strong>Access</strong> — view all data stored by the app (Settings → Privacy → View My Data).</li>
+    <li><strong>Portability</strong> — export your ride data as GPX files (Settings → Export).</li>
+    <li><strong>Erasure (Right to be Forgotten)</strong> — delete all cloud data (Settings → Privacy → Delete Cloud Data). Local data is deleted by uninstalling the app or clearing app data.</li>
+    <li><strong>Restrict processing</strong> — disable Cloud Sync, crash detection, or analytics individually in Settings → Privacy.</li>
+</ul>
+
+<h2>8. Children's Privacy</h2>
+<p>The App is not intended for use by children under the age of 16. We do not knowingly collect data from children under 16.</p>
+
+<h2>9. Permissions</h2>
+<p>The App requests the following Android permissions:</p>
+<ul>
+    <li><strong>Microphone</strong> — for voice communication during intercom calls. Audio is never recorded or stored.</li>
+    <li><strong>Location</strong> — for ride trail recording, crash detection, and map features. Location is never shared with third parties.</li>
+    <li><strong>Bluetooth</strong> — for direct device-to-device intercom communication.</li>
+    <li><strong>WiFi</strong> — for WiFi Direct and WiFi Aware peer-to-peer communication.</li>
+    <li><strong>Camera</strong> — for group photo sharing during rides.</li>
+    <li><strong>NFC</strong> — for tap-to-pair device pairing.</li>
+    <li><strong>Notifications</strong> — for foreground service notification during active calls.</li>
+</ul>
+
+<h2>10. Changes to This Policy</h2>
+<p>We may update this Privacy Policy from time to time. The "Last Updated" date at the top of this page will be revised. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+
+<h2>11. Contact</h2>
+<div class="contact">
+    <p><strong>Developer:</strong> Kabilan Jayaraman</p>
+    <p><strong>Email:</strong> convoy.privacy@gmail.com</p>
+    <p><strong>App:</strong> Convoy (BikeInterCom)</p>
+</div>
+
+<h2>12. Crash Detection Disclaimer</h2>
+<p><strong>Convoy's crash detection feature is NOT a certified safety device.</strong> It uses accelerometer and gyroscope data to estimate the likelihood of a crash, but it can produce false positives and false negatives. Do not rely on this feature as your sole means of emergency communication. Always carry a phone and inform someone of your route before riding.</p>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.bikeintercom",
+      "sha256_cert_fingerprints": [
+        "A9:FD:5C:77:C6:88:C9:4B:51:88:F3:3E:09:37:0C:C7:9E:6F:D0:7C:E7:09:F9:8D:3E:7A:76:BE:3F:1D:2B:18"
+      ]
+    }
+  }
+]
